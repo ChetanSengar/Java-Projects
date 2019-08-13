@@ -1,0 +1,17 @@
+﻿body {
+    font-family: 'Segoe UI', Calibri, Arial;
+    margin:0;
+	background-image: url("rise-of-the-guardians-15704-1366x768.jpg");
+}
+h2{
+    font-weight:900;
+	font-size:24px;
+	font-style:inherit;
+	font-family:Ravie;
+    text-align:center;
+}
+h3{
+    font-weight:normal;
+    margin:3px 0px;
+    text-align:center;
+}
