@@ -226,7 +226,6 @@ public class work extends javax.swing.JFrame implements ActionListener,Controlle
         jLabel13 = new javax.swing.JLabel();
         paint_panel = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         extra_panel = new javax.swing.JPanel();
@@ -266,7 +265,6 @@ public class work extends javax.swing.JFrame implements ActionListener,Controlle
         clock.setFont(new java.awt.Font("Ravie", 0, 48)); // NOI18N
         clock.setText("00:00:00");
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\hp 1\\Desktop\\Android\\icons\\store.png")); // NOI18N
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel3MouseClicked(evt);
@@ -527,9 +525,6 @@ public class work extends javax.swing.JFrame implements ActionListener,Controlle
         });
         paint_panel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 590, 460, 70));
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/a/8992702632b80fc3ab2c40f23df06995.png"))); // NOI18N
-        paint_panel.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 510, 490));
-
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/a/Untitled copy.png"))); // NOI18N
         paint_panel.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 40, 700, 480));
 
@@ -734,8 +729,8 @@ public class work extends javax.swing.JFrame implements ActionListener,Controlle
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        FaceDetection f  = new FaceDetection();
-        setVisible(true);
+       // FaceDetection f  = new FaceDetection();
+        //setVisible(true);
         // TODO add your handling code here:*/
     }//GEN-LAST:event_jButton8ActionPerformed
 
@@ -911,7 +906,6 @@ public class work extends javax.swing.JFrame implements ActionListener,Controlle
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;

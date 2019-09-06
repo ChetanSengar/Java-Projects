@@ -319,20 +319,19 @@ public class login extends javax.swing.JFrame {
          
        try
         {
-                Class.forName("oracle.jdbc.driver.OracleDriver");
+                Class.forName("com.mysql.jdbc.Driver");
                 PreparedStatement ps;
-                Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","chup");
+                Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/javaconnection","root","");
                 if(ID != null && PASSWORD!= null && PASSWORD.length()>=8 && PHONE_NO.length()>=10){
                     ps = con.prepareStatement("INSERT INTO STUDENTS(ID,ROLL_NO,FULL_NAME,AGE,COURSE,PHONE_NO,EMAIL_ID,PASSWORD,ADDRESS) VALUES('"+ID+"','"+ROLL_NO+"','"+FULL_NAME+"','"+AGE+"','"+COURSE+"','"+PHONE_NO+"','"+EMAIL_ID+"','"+PASSWORD+"','"+ADDRESS+"')");
                     ps.executeQuery();
                     JOptionPane.showMessageDialog(null, "Registration Successful ! Have a Good Day.");
                     wel_come e=new wel_come();
                     e.setVisible(true);
-                    
                     ps.close();
                     con.close();
                 } else{
-                    JOptionPane.showMessageDialog(null,"Invalid Information Check your Password and mobile Number.");
+                    JOptionPane.showMessageDialog(null,"Invalid Information, Check your Password and mobile Number.");
                 }
         }
         catch(ClassNotFoundException | SQLException e)
@@ -348,13 +347,10 @@ public class login extends javax.swing.JFrame {
         String PASS = L_PASS.getText();
         try
         {
-            Class.forName("oracle.jdbc.driver.OracleDriver");
-            PreparedStatement ps;
-
-            
-                Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","chup");
-                
-                    ps =(OraclePreparedStatement) con.prepareStatement("select * from STUDENTS where ID='"+ID+"' AND PASSWORD='"+PASS+"'");
+                Class.forName("com.mysql.jdbc.Driver");
+                PreparedStatement ps;
+                    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/javaconnection","root","");
+                    ps = con.prepareStatement("select * from STUDENTS where ID='"+ID+"' AND PASSWORD='"+PASS+"'");
 
                     rs = ps.executeQuery();
                     if(rs.next()){
@@ -368,9 +364,6 @@ public class login extends javax.swing.JFrame {
                     else{
                         JOptionPane.showMessageDialog(null, " ! EMAIL OR PASSWORD IS INCORRECT !");
                     }
-                
-            
-
         }
         catch(ClassNotFoundException | SQLException e)
         {
